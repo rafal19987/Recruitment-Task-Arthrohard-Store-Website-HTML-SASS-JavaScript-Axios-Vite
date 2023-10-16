@@ -3,7 +3,7 @@
   "name": "shop-page-arthrohard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
+  "homepage": "https://transcendent-pasca-c48910.netlify.app/",
   "description": "Simple shop-page for Arthrohard using html, sass, pure js",
   "type": "module",
   "main": "index.js",
