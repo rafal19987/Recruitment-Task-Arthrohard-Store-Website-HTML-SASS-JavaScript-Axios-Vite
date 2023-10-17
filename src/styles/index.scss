@@ -1,2 +1,30 @@
 @import './base/';
 @import './components/';
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  background-color: $body_bg_color;
+  font-family: $primary_font_family;
+  font-size: $font-sm;
+}
+
+main {
+  margin-top: $metric-3xl;
+}
+
+section {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $gray;
+  scroll-padding-top: $metric-sm;
+
+  &:nth-child(even) {
+    background-color: $white;
+  }
+}
