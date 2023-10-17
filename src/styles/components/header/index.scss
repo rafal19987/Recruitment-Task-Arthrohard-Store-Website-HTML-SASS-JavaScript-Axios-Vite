@@ -4,6 +4,7 @@
   justify-content: center;
   position: fixed;
   top: 0px;
+  left: 0px;
   width: 100%;
   height: $metric-3xl;
   background-color: $white;
@@ -20,7 +21,7 @@
     align-items: center;
     gap: $metric-md;
     width: 100%;
-    max-width: 1400px;
+    max-width: $max-container-width;
     height: 100%;
     padding: $metric-xs;
 
