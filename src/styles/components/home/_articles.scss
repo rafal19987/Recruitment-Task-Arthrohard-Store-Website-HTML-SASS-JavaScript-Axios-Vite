@@ -1,0 +1,110 @@
+.product-features {
+  padding-left: $metric-xs;
+  padding-right: $metric-xs;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include laptop {
+    padding-left: $metric-xl;
+    padding-right: $metric-xl;
+  }
+
+  &__headline {
+    @include sectionHeadline;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 100%;
+    margin-top: $metric-3xl;
+    list-style-type: none;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-grow: grow;
+  }
+}
+
+.features-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 416px;
+  height: 100%;
+  flex-grow: grow;
+
+  &__headline {
+    @include h3;
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+  }
+
+  &__description {
+    @include paragraph;
+    text-align: center;
+  }
+
+  &__images-container {
+    display: flex;
+    gap: $metric-md;
+    margin-top: 45px;
+  }
+
+  &__image {
+    position: relative;
+    margin-top: $metric-md;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background-color: $primary-text-color;
+      z-index: 44;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $metric-md;
+  }
+
+  &__list-item {
+    display: flex;
+    gap: $metric-md;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 42px;
+    background: $white;
+    box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.25);
+  }
+}
