@@ -9,7 +9,35 @@
     <title>Shop-page | ARTHROHARD</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="header__content-wrapper">
+          <a class="header__logo" href="#home">
+            <img src="/src/assets/header-logo.svg" alt="header logo image" />
+          </a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="#home">co nas wyróżnia</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="#sklad">skład</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link nav__list-link--bold" href="#produkty"
+                  >produkty</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section id="home"></section>
+        <section id="sklad"></section>
+        <section id="produkty"></section>
+      </main>
+    </div>
     <script type="module" src="/src/js/index.js"></script>
   </body>
 </html>
