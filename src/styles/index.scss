@@ -1,2 +1,49 @@
 @import './base/';
 @import './components/';
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  background-color: black;
+  font-family: $primary_font_family;
+  font-size: $font-sm;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  margin-top: $metric-3xl;
+  background: #000;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  background-color: $gray;
+  scroll-padding-top: $metric-sm;
+
+  &:nth-child(even) {
+    background-color: $white;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: $metric-md;
+  align-items: center;
+  justify-content: center;
+}
+
+.hr {
+  width: 126px;
+  height: 1px;
+  background-color: $primary-text-color;
+}

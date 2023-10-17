@@ -4,14 +4,14 @@
   justify-content: center;
   position: fixed;
   top: 0px;
+  left: 0px;
   width: 100%;
-  min-height: $metric-2xl;
-  height: fit-content;
+  height: $metric-3xl;
   background-color: $white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 10;
 
-  @include desktop {
+  @include laptop {
     flex-direction: row;
   }
 
@@ -21,7 +21,7 @@
     align-items: center;
     gap: $metric-md;
     width: 100%;
-    max-width: 1400px;
+    max-width: $max-container-width;
     height: 100%;
     padding: $metric-xs;
 
@@ -30,7 +30,7 @@
       height: $metric-3xl;
     }
 
-    @include desktop {
+    @include laptop {
       flex-direction: row;
     }
   }
@@ -44,7 +44,7 @@
       width: 239px;
     }
 
-    @include desktop {
+    @include laptop {
       align-self: center;
     }
   }
@@ -53,7 +53,7 @@
 .nav {
   width: fit-content;
 
-  @include desktop {
+  @include laptop {
     margin-left: 300px;
   }
 
@@ -66,7 +66,7 @@
     width: 100%;
     list-style-type: none;
 
-    @include desktop {
+    @include laptop {
       align-self: center;
       gap: $metric-xl;
       width: fit-content;

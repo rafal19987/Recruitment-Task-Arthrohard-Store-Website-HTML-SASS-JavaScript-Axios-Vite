@@ -1,0 +1,80 @@
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  max-width: $max-container-width;
+  padding-left: $metric-xs;
+  padding-right: $metric-xs;
+
+  @include laptop {
+    flex-direction: row;
+    gap: 100px;
+    justify-content: space-between;
+    padding-left: $metric-xl;
+    padding-right: $metric-xl;
+    min-height: calc(100vh - $metric-3xl);
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    max-width: 600px;
+    height: auto;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    max-height: 867px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__content-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $metric-md;
+  }
+
+  &__big-headline {
+    @include h1;
+
+    &--red {
+      color: $red;
+    }
+  }
+
+  &__small-headline {
+    @include h2;
+  }
+
+  &__description {
+    @include paragraph;
+    max-width: 650px;
+  }
+
+  &__buy-now-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 10px 40px;
+    background-color: $green;
+    text-decoration: none;
+    color: $white;
+    font-size: $font-xmd;
+    font-weight: $font-bold;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+    }
+  }
+}
