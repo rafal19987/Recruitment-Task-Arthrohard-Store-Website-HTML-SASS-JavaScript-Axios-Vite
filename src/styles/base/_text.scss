@@ -1,0 +1,123 @@
+@mixin h1 {
+  font-size: clamp(40px, 8vw, $font-3xl);
+  font-weight: $font-medium;
+  text-transform: uppercase;
+}
+
+@mixin h2 {
+  background: linear-gradient(
+    90deg,
+    #111 -8.85%,
+    #b1b1b1 58.84%,
+    #696969 91.39%,
+    #b1b1b1 116.12%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp($font-md, 5vw, $font-xl);
+  font-weight: $font-medium;
+}
+
+@mixin h3 {
+  color: $primary-text-color;
+  font-size: clamp($font-xmd, 4vw, $font-bmd);
+  font-weight: $font-medium;
+}
+
+@mixin paragraph {
+  color: $primary-text-color;
+  font-size: clamp($font-sm, 3vw, $font-xmd);
+  font-weight: $font-normal;
+}
+
+@mixin navLink {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: $black;
+  padding-top: $metric-xs;
+  padding-bottom: $metric-xs;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background: #111111;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@mixin navLink--active {
+  @include navLink;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #111111;
+  }
+}
+
+@mixin sectionHeadline {
+  background: linear-gradient(
+    90deg,
+    #111 -8.85%,
+    #b1b1b1 58.84%,
+    #696969 91.39%,
+    #b1b1b1 116.12%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: $font-xl;
+  font-weight: $font-medium;
+}
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 10px 40px;
+  color: $white;
+  font-size: $font-xmd;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: normal;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
+}
+
+@mixin button-red {
+  @include button;
+  background-color: $light-red;
+}
+
+@mixin button-green {
+  @include button;
+  background-color: $green;
+}
