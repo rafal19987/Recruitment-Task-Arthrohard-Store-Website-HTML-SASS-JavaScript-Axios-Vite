@@ -60,21 +60,6 @@
   }
 
   &__buy-now-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    padding: 10px 40px;
-    background-color: $green;
-    text-decoration: none;
-    color: $white;
-    font-size: $font-xmd;
-    font-weight: $font-bold;
-    transition: all 0.1s ease-in-out;
-
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.02);
-    }
+    @include button-green;
   }
 }
