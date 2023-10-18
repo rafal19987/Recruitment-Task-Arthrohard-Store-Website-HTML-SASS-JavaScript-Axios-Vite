@@ -25,13 +25,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const index = sections.indexOf(entry.target);
-      console.log(index);
       toggleActiveClass({ target: navLinks[index] });
-
-      // index 2 means 'producty' section, here we can handle start fetching products
-      if (index === 2) {
-        console.log('products section is visible we can fetch data');
-      }
     }
   });
 }, observerOption);
