@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-color: black;
   font-family: $primary_font_family;
@@ -25,7 +25,6 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
-
   background-color: $gray;
   scroll-padding-top: $metric-sm;
 
