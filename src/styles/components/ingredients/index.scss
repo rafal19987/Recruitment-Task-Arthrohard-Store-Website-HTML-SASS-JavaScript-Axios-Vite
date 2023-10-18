@@ -1,0 +1,133 @@
+.ingredients {
+  &__headline {
+    @include h2;
+  }
+
+  &__small-headline {
+    @include h3;
+  }
+
+  &__main-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $metric-xs;
+
+    @include desktop {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &__center-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 400px;
+    height: auto;
+
+    @include tablet {
+      max-width: 700px;
+    }
+  }
+
+  &__buy-now-btn {
+    @include button-red;
+    position: absolute;
+    bottom: 5%;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-grow: 3;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $metric-md;
+    width: 100%;
+    padding: 50px;
+
+    @include tablet {
+      max-width: 50%;
+    }
+
+    @include desktop {
+      width: 417px;
+      max-width: 100%;
+      padding: 0;
+    }
+
+    &-circle {
+      width: 70px;
+      height: 70px;
+      background-color: #d9d9d9;
+      border-radius: 99px;
+    }
+
+    &-headline {
+      @include h3;
+      padding: 0 0 $metric-xs 0;
+      position: relative;
+      transition: all 0.2s ease-in;
+
+      @include tablet {
+        padding: 0 0 $metric-md 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0;
+        background: #111111;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+
+    &-preference {
+      @include paragraph;
+    }
+
+    &-description {
+      @include paragraph;
+      max-width: 50%;
+      text-align: center;
+
+      @include tablet {
+        max-width: 100%;
+      }
+    }
+  }
+}
