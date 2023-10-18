@@ -84,3 +84,26 @@
   font-size: $font-xl;
   font-weight: $font-medium;
 }
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 40px;
+  color: $white;
+  font-size: $font-xmd;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: normal;
+}
+
+@mixin button-red {
+  @include button;
+  background-color: $light-red;
+}
+
+@mixin button-green {
+  @include button;
+  background-color: $green;
+}
