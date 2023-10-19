@@ -255,15 +255,21 @@
             <img src="/src/assets/black-dog-image.png" alt="black dog image" />
           </div>
         </section>
-        <section id="products">
+        <section id="products" class="products">
           <div class="observableSection"></div>
-          <div>
-            <label for="itemsPerPage">liczba produktów na stronie:</label>
-            <select name="itemsPerPage" id="itemsPerPage">
-              <option value="20">20</option>
-              <option value="30">30</option>
-              <option value="40">40</option>
-              <option value="50">50</option>
+          <div class="products__select-container">
+            <label class="products__select-label" for="itemsPerPage"
+              >liczba produktów na stronie:</label
+            >
+            <select
+              class="products__select-form"
+              name="itemsPerPage"
+              id="itemsPerPage"
+            >
+              <option value="20" tabindex="0">20</option>
+              <option value="30" abindex="0">30</option>
+              <option value="40" abindex="0">40</option>
+              <option value="50" abindex="0">50</option>
             </select>
           </div>
           <ul class="products__list"></ul>
