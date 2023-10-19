@@ -1,14 +1,68 @@
-#products {
+.products {
   display: flex;
   flex-direction: column;
-}
+  padding-right: $metric-sm;
+  padding-left: $metric-sm;
 
-.products {
+  &__select-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: $metric-3xl;
+  }
+
+  &__select-label {
+    padding: 10px;
+    border: 1px solid $light-red;
+    color: $black;
+    font-size: $font-xmd;
+    font-style: normal;
+    font-weight: $font-medium;
+    line-height: normal;
+  }
+
+  &__select-form {
+    width: 127px;
+    height: 46px;
+    padding: 10px 40px;
+    background-color: $light-red;
+    color: $gray;
+    font-size: $font-xmd;
+    font-style: normal;
+    font-weight: $font-bold;
+    line-height: normal;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  }
+
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    place-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+    column-gap: 50px;
+    margin-top: $metric-3xl;
+    padding-bottom: 200px;
+    width: 100%;
+    min-height: 500px;
     list-style-type: none;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include laptop {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include desktop {
+      max-width: 1684px;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 
@@ -16,9 +70,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 100%;
+  max-width: 484px;
   height: 300px;
-  background-color: $black;
-  color: $white;
-  font-size: $font-xl;
+  background-color: #bebebe;
+  color: $black;
+  font-size: $font-xmd;
+  transition: all 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: translateY(-10px);
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  }
+
+  @include desktop {
+    min-width: 50%;
+    max-height: 350px;
+    max-width: 371px;
+  }
 }
