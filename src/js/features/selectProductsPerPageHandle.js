@@ -7,5 +7,6 @@ const productsPerPage = document.querySelector('#itemsPerPage');
 productsPerPage.addEventListener('change', () => {
   clearProducts();
   settings.resetPage();
+  settings.productsPerPage = productsPerPage.value;
   fetchProducts();
 });
