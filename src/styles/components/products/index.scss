@@ -1,8 +1,25 @@
+@import 'modal';
+
 .products {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-right: $metric-sm;
   padding-left: $metric-sm;
+
+  &__details-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 30;
+    overflow: hidden;
+  }
 
   &__select-container {
     display: flex;
@@ -46,7 +63,7 @@
     row-gap: 35px;
     column-gap: 50px;
     margin-top: $metric-3xl;
-    padding-bottom: 200px;
+    padding-bottom: 400px;
     width: 100%;
     min-height: 500px;
     list-style-type: none;
