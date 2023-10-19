@@ -3,7 +3,7 @@ import { fetchProducts } from './fetchProducts';
 const productSection = document.querySelector('.products__select-container');
 const observerOption = {
   root: null,
-  rootMargin: '-200px',
+  rootMargin: '0px',
   threshold: 1,
 };
 

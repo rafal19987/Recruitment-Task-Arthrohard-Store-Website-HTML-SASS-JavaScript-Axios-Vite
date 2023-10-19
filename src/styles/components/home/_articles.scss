@@ -1,10 +1,11 @@
 .product-features {
-  padding-left: $metric-xs;
-  padding-right: $metric-xs;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-left: $metric-xs;
+  padding-right: $metric-xs;
+  padding-bottom: $metric-3xl;
 
   @include laptop {
     padding-left: $metric-xl;
@@ -12,7 +13,7 @@
   }
 
   &__headline {
-    @include sectionHeadline;
+    @include h2;
   }
 
   &__list {
@@ -49,6 +50,10 @@
   height: 100%;
   flex-grow: grow;
 
+  @include laptop {
+    height: 626px;
+  }
+
   &__headline {
     @include h3;
     width: 100%;
@@ -62,9 +67,30 @@
   }
 
   &__images-container {
+    position: relative;
     display: flex;
     gap: $metric-md;
     margin-top: 45px;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -24px;
+      height: 1px;
+      width: 0;
+      background: #111111;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   &__image {
@@ -86,7 +112,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: $metric-md;
+    gap: $metric-xl;
   }
 
   &__list-item {

@@ -1,7 +1,7 @@
 const navLinks = document.querySelectorAll('.nav__list-link');
 const sections = [...document.querySelectorAll('.observableSection')];
 const observerOption = {
-  root: null,
+  root: document.querySelector('body'),
   rootMargin: '0px',
   threshold: 0.6,
 };
