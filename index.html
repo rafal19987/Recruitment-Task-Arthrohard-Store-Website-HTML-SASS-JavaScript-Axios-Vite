@@ -62,9 +62,12 @@
             </div>
           </div>
           <div class="product-features">
-            <h2 class="product-features__headline">
-              Co wyróżnia nasz preparat
-            </h2>
+            <div class="flex">
+              <h2 class="product-features__headline">
+                Co wyróżnia nasz preparat
+              </h2>
+              <div class="hr" />
+            </div>
             <ul class="product-features__list">
               <li class="product-features__list-item">
                 <article class="features-article">
@@ -81,12 +84,14 @@
                     zauważalne efekty, szczególnie korzystne dla zwierząt z
                     poważnymi problemami stawowymi.
                   </p>
-                  <img
-                    class="features-article__image"
-                    src="/src/assets/flower-image.png"
-                    alt="feature article image"
-                    loading="lazy"
-                  />
+                  <div class="features-article__images-container">
+                    <img
+                      class="features-article__image"
+                      src="/src/assets/flower-image.png"
+                      alt="feature article image"
+                      loading="lazy"
+                    />
+                  </div>
                 </article>
               </li>
               <li class="product-features__list-item">
@@ -142,12 +147,14 @@
                     długo. Skorzystaj z zalet Arthrohard i zobacz różnicę w
                     komforcie życia swojego zwierzęcia..
                   </p>
-                  <img
-                    class="features-article__image"
-                    src="/src/assets/syringe-image.png"
-                    alt="feature article image"
-                    loading="lazy"
-                  />
+                  <div class="features-article__images-container">
+                    <img
+                      class="features-article__image"
+                      src="/src/assets/syringe-image.png"
+                      alt="feature article image"
+                      loading="lazy"
+                    />
+                  </div>
                 </article>
               </li>
             </ul>
@@ -256,6 +263,12 @@
           </div>
         </section>
         <section id="products" class="products">
+          <div class="products__details-container hidden">
+            <div class="modal">
+              <ul class="modal__details-list"></ul>
+              <div class="modal__close-btn">x</div>
+            </div>
+          </div>
           <div class="observableSection"></div>
           <div class="products__select-container">
             <label class="products__select-label" for="itemsPerPage"
