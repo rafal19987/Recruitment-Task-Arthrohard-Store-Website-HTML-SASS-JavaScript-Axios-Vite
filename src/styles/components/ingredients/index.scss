@@ -1,10 +1,12 @@
 .ingredients {
   &__headline {
     @include h2;
+    margin-top: 50px;
   }
 
   &__small-headline {
     @include h3;
+    margin-top: 100px;
   }
 
   &__main-content-container {
@@ -13,6 +15,7 @@
     align-items: center;
     justify-content: center;
     padding: $metric-xs;
+    margin-top: $metric-3xl;
 
     @include desktop {
       flex-direction: row;
