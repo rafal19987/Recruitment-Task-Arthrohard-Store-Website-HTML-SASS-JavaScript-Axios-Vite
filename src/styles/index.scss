@@ -26,7 +26,7 @@ section {
   padding-left: $metric-sm;
   padding-right: $metric-sm;
   background-color: $gray;
-  scroll-padding-top: $metric-sm;
+  scroll-margin-top: 122px;
 
   &:nth-child(even) {
     background-color: $white;
