@@ -1,7 +1,7 @@
 const navLinks = document.querySelectorAll('.nav__list-link');
 const sections = [...document.querySelectorAll('.observableSection')];
 const observerOption = {
-  root: null,
+  root: document.querySelector('body'),
   rootMargin: '0px',
   threshold: 0.6,
 };
@@ -25,13 +25,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const index = sections.indexOf(entry.target);
-      console.log(index);
       toggleActiveClass({ target: navLinks[index] });
-
-      // index 2 means 'producty' section, here we can handle start fetching products
-      if (index === 2) {
-        console.log('products section is visible we can fetch data');
-      }
     }
   });
 }, observerOption);
