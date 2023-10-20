@@ -1,5 +1,5 @@
-import { settings } from './settings';
-import { clearProducts } from './clearProducts';
+import { settings } from '../helpers/settings';
+import { clearProducts } from '../helpers/clearProducts';
 import { fetchProducts } from './fetchProducts';
 
 const productsPerPage = document.querySelector('#itemsPerPage');

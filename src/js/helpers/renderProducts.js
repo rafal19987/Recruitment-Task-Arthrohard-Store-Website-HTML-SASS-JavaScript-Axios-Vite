@@ -1,4 +1,4 @@
-import { renderProductDetails } from './renderProductDetails';
+import { renderProductDetails } from '../features/renderProductDetails';
 const productsList = document.querySelector('.products__list');
 
 const Product = ({ id, name, value }) => {
