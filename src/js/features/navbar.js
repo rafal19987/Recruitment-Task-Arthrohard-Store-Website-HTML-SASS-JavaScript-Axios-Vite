@@ -1,9 +1,9 @@
 const navLinks = document.querySelectorAll('.nav__list-link');
 const sections = [...document.querySelectorAll('.observableSection')];
 const observerOption = {
-  root: document.querySelector('body'),
+  root: null,
   rootMargin: '0px',
-  threshold: 0.6,
+  threshold: 1,
 };
 
 // set first section as initial active
