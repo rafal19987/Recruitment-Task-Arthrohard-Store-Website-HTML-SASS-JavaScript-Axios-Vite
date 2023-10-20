@@ -23,27 +23,6 @@
     }
   }
 
-  &__decorator-1,
-  &__decorator-2 {
-    position: absolute;
-    width: 50%;
-    z-index: 1;
-  }
-
-  &__decorator-1 {
-    width: 50%;
-    transform: rotate(-20deg);
-    top: 400px;
-    left: -20px;
-  }
-
-  &__decorator-2 {
-    width: 40%;
-    transform: rotate(0deg);
-    top: 280px;
-    right: -30px;
-  }
-
   &__center-container {
     position: relative;
     display: flex;
@@ -67,6 +46,7 @@
     @include button-red;
     position: absolute;
     bottom: 5%;
+    z-index: 5;
   }
 
   &__image {
