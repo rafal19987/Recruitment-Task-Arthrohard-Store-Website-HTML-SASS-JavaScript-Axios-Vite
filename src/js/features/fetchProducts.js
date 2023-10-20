@@ -1,7 +1,7 @@
-import { renderProducts } from './renderProducts';
-import { getLastProductOfProducts } from './getLastProductOfProducts';
+import { renderProducts } from '../helpers/renderProducts';
+import { getLastProductOfProducts } from '../helpers/getLastProductOfProducts';
 import { observeLastProduct } from './lastProductObserver';
-import { getProductsFromApi } from './getProductsFromApi';
+import { getProductsFromApi } from '../helpers/getProductsFromApi';
 
 export const fetchProducts = async () => {
   try {
