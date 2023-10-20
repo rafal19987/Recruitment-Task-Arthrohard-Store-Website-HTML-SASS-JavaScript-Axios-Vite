@@ -92,7 +92,9 @@
   height: 300px;
   background-color: #bebebe;
   color: $black;
-  font-size: $font-xmd;
+  font-size: $font-bmd;
+  font-weight: $font-bold;
+  line-height: 39.74px;
   transition: all 0.3s ease;
 
   &:hover {

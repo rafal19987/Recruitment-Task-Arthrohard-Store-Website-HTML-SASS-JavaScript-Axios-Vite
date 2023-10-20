@@ -1,4 +1,4 @@
-import { renderProductDetails } from './renderProductDetails';
+import { renderProductDetails } from '../features/renderProductDetails';
 const productsList = document.querySelector('.products__list');
 
 const Product = ({ id, name, value }) => {
@@ -7,7 +7,7 @@ const Product = ({ id, name, value }) => {
   product.addEventListener('click', () =>
     renderProductDetails({ id, name, value })
   );
-  product.innerText = id;
+  product.innerText = `ID: ${id}`;
   return product;
 };
 

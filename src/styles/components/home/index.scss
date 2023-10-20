@@ -2,7 +2,46 @@
 @import 'articles';
 
 #home {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 150px;
+}
+
+.home__decorator-1 {
+  display: none;
+  position: absolute;
+  top: 80vh;
+  left: -120px;
+
+  transform: rotate(60deg);
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.home__decorator-2 {
+  display: none;
+  position: absolute;
+  top: 80vh;
+  right: -120px;
+  transform: rotate(-64deg);
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.home__decorator-3 {
+  display: none;
+  position: absolute;
+  top: 60vh;
+  right: -50px;
+  width: 5%;
+  transform: rotate(-25deg);
+
+  @include desktop {
+    display: block;
+  }
 }
