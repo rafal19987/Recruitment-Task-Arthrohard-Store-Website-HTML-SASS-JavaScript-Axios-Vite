@@ -7,7 +7,7 @@ const Product = ({ id, name, value }) => {
   product.addEventListener('click', () =>
     renderProductDetails({ id, name, value })
   );
-  product.innerText = id;
+  product.innerText = `ID: ${id}`;
   return product;
 };
 

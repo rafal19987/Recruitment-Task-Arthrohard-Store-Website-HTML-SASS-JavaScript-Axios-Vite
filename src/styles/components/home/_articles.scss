@@ -72,6 +72,7 @@
     gap: $metric-md;
     margin-top: 45px;
     transition: all 0.2s ease-in;
+    z-index: 2;
 
     &:hover {
       cursor: pointer;
@@ -132,5 +133,49 @@
     border-radius: 42px;
     background: $white;
     box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.features-article__decorator-1,
+.features-article__decorator-2,
+.features-article__decorator-3,
+.features-article__decorator-4,
+.features-article__decorator-5,
+.features-article__decorator-6 {
+  display: none;
+  position: absolute;
+  width: 20%;
+  z-index: -1;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.features-article {
+  &__decorator-1,
+  &__decorator-5 {
+    transform: rotate(-8.25deg);
+    bottom: 15%;
+    left: -15%;
+  }
+
+  &__decorator-2 {
+    transform: rotate(18deg);
+    top: 50px;
+    right: -12%;
+  }
+
+  &__decorator-3 {
+    transform: rotate(-161deg);
+    bottom: 0;
+    left: -15%;
+  }
+
+  &__decorator-4,
+  &__decorator-6 {
+    transform: rotate(180deg);
+    bottom: 0;
+    right: -7%;
   }
 }
