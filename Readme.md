@@ -1,7 +1,7 @@
 ## About
 
 Simple shop-page for Arthrohard using html, sass, pure js. Build with Vite.
-- Live version: 
+- Live version: https://transcendent-pasca-c48910.netlify.app/
 
 ## How to run
 
